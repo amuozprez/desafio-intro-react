@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import MyCard from './components/MyCard'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cards = [
+    {
+      url: "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg",
+      nombre: "Mestizo",
+      descripcion: "Perro adorable, familiar, jugueton y sociable."
+    },
+    {
+      url: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      nombre: "Labrador",
+      descripcion: "Perro jugueton, inquieto, mordelon."
+    },
+    {
+      url: "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg",
+      nombre: "Pug",
+      descripcion: "Perro mañoso, independiente, dormilon."
+    }
+  ]
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Header title="Adopta un Perrito"/>
+        <div className='container mt-3'>
+          <div className='row'>
+            {cards.map((card, index) => (
+              <div className='col-md-4' key={index}>
+                <MyCard {...card}/>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }
