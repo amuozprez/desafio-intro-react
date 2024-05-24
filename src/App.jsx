@@ -1,25 +1,31 @@
 import './App.css'
 import Header from './components/Header'
 import MyCard from './components/MyCard'
+import Footer from './components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const cards = [
     {
       url: "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg",
-      nombre: "Mestizo",
-      descripcion: "Perro adorable, familiar, jugueton y sociable."
+      nombre: "Kai",
+      descripcion: "Perro adorable, familiar, jugueton y sociable.",
+      tags: [{text: "Mestizo", color: "primary"}]
     },
     {
       url: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      nombre: "Labrador",
-      descripcion: "Perro jugueton, inquieto, mordelon."
+      nombre: "Baki",
+      descripcion: "Perro jugueton, inquieto, mordelon, sociable.",
+      tags: [{text: "Labrador", color: "success"}]
     },
     {
       url: "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg",
-      nombre: "Pug",
-      descripcion: "Perro mañoso, independiente, dormilon."
+      nombre: "Panzer",
+      descripcion: "Perro mañoso, independiente, dormilon.",
+      tags: [{text: "Pug", color: "danger"}]
     }
   ]
+
 
   return (
     <>
@@ -34,6 +40,7 @@ function App() {
             ))}
           </div>
         </div>
+        <Footer ending="lorem ipsum"/>
       </div>
 
     </>

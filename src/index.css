@@ -71,3 +71,8 @@ button:focus-visible {
   height: 250px;
   width: 200px;
 }
+
+.card{
+  justify-content: center;
+  align-items: center;
+}
