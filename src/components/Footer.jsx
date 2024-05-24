@@ -1,7 +1,8 @@
-function Footer({ending}) {
+function Footer({ending, copyright}) {
   return (
     <div className='footer'>
-        <h4 className='footer-title'>{ending}</h4>
+        <h5 className='footer-title'>{ending}</h5>
+        <p className='footer-p'>{copyright}</p>
     </div>
   )
 }

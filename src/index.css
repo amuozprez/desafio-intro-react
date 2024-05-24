@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
@@ -75,4 +76,25 @@ button:focus-visible {
 .card{
   justify-content: center;
   align-items: center;
+}
+
+.header{
+  min-width: 100vh;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C5D9E2;
+}
+
+.footer{
+  min-width: 100vh;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #B3B5BB;
+  padding-top: 1rem;
+  margin-top: 1rem;
 }

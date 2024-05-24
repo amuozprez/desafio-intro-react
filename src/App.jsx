@@ -40,7 +40,10 @@ function App() {
             ))}
           </div>
         </div>
-        <Footer ending="lorem ipsum"/>
+        <Footer 
+          ending="Somos una organización dedicada a encontrar hogares amorosos para mascotas sin hogar. Creemos que cada animal merece una segunda oportunidad y trabajamos incansablemente para asegurarnos de que cada mascota encuentre el hogar perfecto."
+          copyright="&copy; 2024 Adopta una Mascota. Todos los derechos reservados."
+        />
       </div>
 
     </>
